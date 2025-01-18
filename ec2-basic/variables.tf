@@ -10,7 +10,7 @@ variable "instance_type" {
 
 variable "ami_id" {
   description = "AMI ID"
-  default     = "ami-0c55b159cbfafe1f0"
+  default     = "ami-093a4ad9a8cc370f4"
 }
 
 variable "environment" {
