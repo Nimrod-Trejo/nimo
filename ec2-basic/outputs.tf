@@ -1,4 +1,9 @@
-output "instance_public_ip" {
-  description = "Public IP of the EC2 instance"
-  value       = [for instance in aws_instance.example : instance.public_ip]
+output "dev_instance_public_ips" {
+  description = "Public IP of the EC2 instances for dev"
+  value       = module.dev_ec2.instance_public_ips
+}
+
+output "qa_instance_public_ips" {
+  description = "Public IP of the EC2 instances for QA"
+  value       = module.qa_ec2.instance_public_ips
 }

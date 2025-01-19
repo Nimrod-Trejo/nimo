@@ -1,23 +1,39 @@
-variable "aws_region" {
-  description = "AWS Region"
-  default     = "us-west-2"
+variable "dev_aws_region" {
+  description = "AWS region for dev environment"
+  type        = string
 }
 
-variable "instance_type" {
-  description = "EC2 instance type"
-  default     = "t2.micro"
+variable "dev_ami_id" {
+  description = "AMI ID for dev environment"
+  type        = string
 }
 
-variable "ami_id" {
-  description = "AMI ID"
-  default     = "ami-093a4ad9a8cc370f4"
+variable "dev_instance_type" {
+  description = "Instance type for dev environment"
+  type        = string
 }
 
-variable "environment" {
-  description = "Environment (dev, qa, prod)"
-  default     = "dev"
+variable "dev_instance_count" {
+  description = "Number of instances for dev environment"
+  type        = number
 }
-variable "instance_count" {
-  description = "Number of EC2 instances to create"
-  default     = 3
+
+variable "qa_aws_region" {
+  description = "AWS region for QA environment"
+  type        = string
+}
+
+variable "qa_ami_id" {
+  description = "AMI ID for QA environment"
+  type        = string
+}
+
+variable "qa_instance_type" {
+  description = "Instance type for QA environment"
+  type        = string
+}
+
+variable "qa_instance_count" {
+  description = "Number of instances for QA environment"
+  type        = number
 }
