@@ -17,3 +17,7 @@ variable "instance_count" {
   description = "Number of instances"
   type        = number
 }
+variable "environment" {
+  description = "Environment name (dev, qa, prod)"
+  type        = string
+}
