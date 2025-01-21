@@ -1,6 +1,3 @@
-provider "aws" {
-  region = var.aws_region
-}
 resource "aws_instance" "example" {
   count         = var.instance_count
   ami           = var.ami_id
